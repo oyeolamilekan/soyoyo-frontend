@@ -25,7 +25,7 @@ export function Button({
         computedClass.push('w-full')
     }
     return (
-        <button type={type} className={`${computedClass.join(' ')} ${loading ? "opacity-50" : ""} ${customClass} text-sm`} disabled={disabled} onClick={(e) => onClick(e)}>
+        <button type={type} className={`${computedClass.join(' ')} ${loading ? "opacity-50" : ""} ${customClass} text-sm mb-2`} disabled={disabled} onClick={(e) => onClick(e)}>
             {loading ? <Loader /> : <span>{children}</span>}
         </button>
     )

@@ -1,10 +1,7 @@
 import axios from "axios";
-import { APPNAME, DEBUG } from "./status";
+import { APPNAME } from "./status";
 
-const PRODAPIURL = '';
-const TESTAPIURL = 'http://localhost:3000/api/v1/'
-
-const APIURL = DEBUG ? TESTAPIURL : PRODAPIURL
+const APIURL = import.meta.env.VITE_BASE_URL
 
 const getToken = () => {
     const store = JSON.parse(sessionStorage.getItem(APPNAME) ?? '{}');

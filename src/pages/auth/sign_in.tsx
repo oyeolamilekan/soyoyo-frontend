@@ -9,6 +9,7 @@ import { Input } from "../../components/";
 import { APPNAME } from "../../config";
 import { useForm } from "../../hooks/useForm";
 import { useSessionStorage } from "../../hooks/useSession";
+import Logo from "../../assets/icon.png";
 
 export default function SignIn() {
   const navigate = useNavigate()
@@ -44,8 +45,10 @@ export default function SignIn() {
 
   return (
     <div className="h-screen fixed bg-slate-100 w-full">
-      <div className="bg-white md:max-w-xl w-[90%]  mx-auto mt-10 shadow shadow-gray-300 rounded px-10 py-8 flex justify-center flex-col">
-        <h3 className="text-xl font-semibold space-x-9 text-center mb-8">Login</h3>
+      <div className="bg-white md:max-w-xl w-[90%] mx-auto mt-10 shadow shadow-gray-300 rounded px-10 py-8 flex flex-col justify-center">
+        <img src={Logo} alt="logo" className="w-10 h-10 mt-3 relative m-auto mb-3" />
+        <h3 className="text-xl font-semibold space-x-9 text-center mb-8">Sign in</h3>
+        <p className="text-center my-4">Sign in to continue to your Dashboard</p>
         <Form onSubmit={onSubmit}>
           <Input
             showPassword={false}

@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../components";
 import Logo from "../assets/icon.png";
 
 export default function LandingPage() {
+    const navigate = useNavigate()
 
     const pushToGithub = () => {
         window.open('https://github.com/oyeolamilekan?tab=repositories', '_blank')
@@ -10,7 +11,6 @@ export default function LandingPage() {
 
     return (
         <div className="relative">
-            
             <div className="max-w-5xl m-auto px-5">
                 <div className="flex justify-between items-center py-5">
                     <div className="flex justify-center align-middle middle">
@@ -35,7 +35,7 @@ export default function LandingPage() {
                         <Button variant="sm" size="non-full" onClick={pushToGithub}>
                             View Github
                         </Button>
-                        <Button size="non-full" variant="outline">
+                        <Button size="non-full" variant="outline" onClick={() => navigate("/app/sign_in")}>
                             Sign in
                         </Button>
                     </div>

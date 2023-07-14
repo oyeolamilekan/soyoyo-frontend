@@ -12,7 +12,7 @@ export const ProtectedRoute = ({ children }: any) => {
 export const UnProtectedRoute = ({ children }: any) => {
     const user: boolean = useAuth();
     if (user) {
-        return <><Navigate to="/app/dashboard" /></>;
+        return <><Navigate to="/app/business" /></>;
     }
     return<>{children}</>;
 };

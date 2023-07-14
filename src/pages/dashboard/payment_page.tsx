@@ -146,6 +146,9 @@ export default function PaymentPages() {
                   Status
                 </th>
                 <th className="px-6 py-3">
+                  Currency
+                </th>
+                <th className="px-6 py-3">
                   Payment Url
                 </th>
                 <th className="px-6 py-3">
@@ -158,6 +161,7 @@ export default function PaymentPages() {
                   <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap capitalize">{page?.title}</td>
                   <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap capitalize">{formatNumber(page?.amount)}</td>
                   <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase">{page?.status}</td>
+                  <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase">{page?.currency}</td>
                   <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                     <a href={page?.payment_url} target="__blank__">
                       {page?.payment_url}

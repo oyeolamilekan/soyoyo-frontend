@@ -33,3 +33,5 @@ export const formatNumber = (amount: string, decimalPoint: number = 2) => {
 }
 
 export const generateId = (length = 5) => Math.random().toString(36).substr(2, length);
+
+export const redirectUrl = (url: string) => window.open(url, "_self")
